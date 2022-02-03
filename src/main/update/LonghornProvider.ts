@@ -118,7 +118,7 @@ interface LonghornCache {
     tag: string;
     /** The name of the release, typically the same as the tag. */
     name: string;
-    /** Release notes, in GitHub-flavoured markdown. */
+    /** Release Notes, in GitHub-flavoured markdown. */
     notes: string;
     /** The release date of the next release. */
     date: string;

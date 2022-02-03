@@ -11,7 +11,7 @@
 - [ ] Rename installer filename to replace space with dot.
 
 ### Release Documentation
-- [ ] Release notes. Update on the GitHub draft Release page.
+- [ ] Release Notes. Update on the GitHub draft Release page.
 - [ ] docs update (Help, Readme..)
 - [ ] Slack Announcements
 - [ ] Newsletter summary

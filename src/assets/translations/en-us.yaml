@@ -241,7 +241,7 @@ about:
     cli: CLI
     helm: Helm
     machine: Machine
-    releaseNotes: 'View release notes'
+    releaseNotes: 'View Release Notes'
   os:
     mac: macOS
     windows: Windows

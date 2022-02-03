@@ -100,7 +100,7 @@ describe('UpdateStatus.vue', () => {
     });
   });
 
-  describe('release notes', () => {
+  describe('Release Notes', () => {
     it('should not be displayed if there are none', () => {
       const wrapper = wrap({ enabled: true, updateState: { info: { version: 'v1.2.3' } } as UpdateState });
 
