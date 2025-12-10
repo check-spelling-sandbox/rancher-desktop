@@ -61,6 +61,7 @@ find_script() {
     local repo=https://github.com/check-spelling/check-spelling
     local version
     version="v$(yq --exit-status .check-spelling pkg/rancher-desktop/assets/dependencies.yaml)"
+    version=prerelease
 
     if [[ ! -d "$checkout" ]]; then
         git clone --branch "$version" --depth 1 "$repo" "$checkout" >&2
