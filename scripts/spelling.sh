@@ -82,7 +82,6 @@ script=$(find_script)
 
 INPUTS=$(yq --output-format=json <<EOF
     suppress_push_for_open_pull_request: 1
-    checkout: true
     check_file_names: 1
     post_comment: 0
     use_magic_file: 1
@@ -90,32 +89,15 @@ INPUTS=$(yq --output-format=json <<EOF
     report-timing: 1
     warnings: bad-regex,binary-file,deprecated-feature,ignored-expect-variant,large-file,limited-references,no-newline-at-eof,noisy-file,non-alpha-in-dictionary,token-is-substring,unexpected-line-ending,whitespace-in-dictionary,minified-file,unsupported-configuration,no-files-to-check
     use_sarif: ${CI:-0}
-    check_extra_dictionaries: ""
-    dictionary_source_prefixes: >
-        {
-        "cspell": "https://raw.githubusercontent.com/check-spelling/cspell-dicts/v20241114/dictionaries/",
-        "census": "https://raw.githubusercontent.com/check-spelling-sandbox/census/dictionaries-d90e686f89dd241ad61d30f26619e54d73e73c6e/dictionaries/"
-        }
-    extra_dictionaries:
-        cspell:software-terms/softwareTerms.txt
-        census:census-5.txt
-        cspell:npm/npm.txt
-        cspell:k8s/k8s.txt
-        cspell:node/node.txt
-        cspell:aws/aws.txt
-        cspell:python/python/python-lib.txt
-        cspell:golang/go.txt
-        cspell:typescript/typescript.txt
-        cspell:shell/shell-all-words.txt
-        cspell:filetypes/filetypes.txt
-        cspell:html/html.txt
-        cspell:fonts/fonts.txt
-        cspell:php/php.txt
-        cspell:css/css.txt
-        cspell:fullstack/fullstack.txt
-        cspell:cpp/stdlib-cmath.txt
-        cspell:powershell/powershell.txt
-        cspell:dart/dart.txt
+    load-config-from: |
+      {
+        "pr-base-keys": [
+          "check_extra_dictionaries",
+          "dictionary_source_prefixes",
+          "extra_dictionaries",
+          ""
+        ]
+      }
 EOF
 )
 
