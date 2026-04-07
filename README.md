@@ -1,4 +1,4 @@
-# Rancher Desktop
+# Raancher Desktop
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/rancher-sandbox/rancher-desktop)
 
